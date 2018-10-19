@@ -1,7 +1,8 @@
 CONFIG_LOCALVERSION="-zen"
 # CONFIG_LOCALVERSION_AUTO is not set
-# CONFIG_USELIB is not set
+CONFIG_OF=y
 CONFIG_AUDIT=y
+CONFIG_DEBUG_RODATA=y
 # CONFIG_AUDITSYSCALL is not set
 CONFIG_NO_HZ=y
 CONFIG_HIGH_RES_TIMERS=y
@@ -338,8 +339,6 @@ CONFIG_INPUT_STMVL53L0=y
 # CONFIG_SERIO_SERPORT is not set
 # CONFIG_VT is not set
 # CONFIG_LEGACY_PTYS is not set
-# CONFIG_DEVMEM is not set
-# CONFIG_DEVKMEM is not set
 CONFIG_SERIAL_MSM_HS=y
 CONFIG_SERIAL_MSM_SMD=y
 CONFIG_DIAG_CHAR=y
@@ -641,9 +640,7 @@ CONFIG_MSM_EVENT_TIMER=y
 CONFIG_MSM_AVTIMER=y
 CONFIG_QCOM_REMOTEQDSS=y
 CONFIG_MSM_SERVICE_NOTIFIER=y
-# Huaqin modify for ZQL1650-143 by wangxiang at 2018/01/23 start
 #CONFIG_MSM_QBT1000=y
-# Huaqin modify for ZQL1650-143 by wangxiang at 2018/01/23 end
 CONFIG_MSM_RPM_RBCPR_STATS_V2_LOG=y
 CONFIG_MSM_RPM_LOG=y
 CONFIG_MSM_RPM_STATS_LOG=y
@@ -757,15 +754,10 @@ CONFIG_HID_SONY=y
 # Huaqin add for ZQL1650-155 by xudayi at 2018/02/02 start
 CONFIG_SND_SOC_AW87339=y
 # Huaqin add for ZQL1650-155 by xudayi at 2018/02/02 end
-
 # Huaqin add for new audioboard bring up by xudayi at 2018/03/03 start
 CONFIG_SND_SOC_TFA9874=y
 # Huaqin add for new audioboard bring up by xudayi at 2018/03/03 end
-
-# Huaqin add for ZQL1650-5 by lanshiming at 2018/02/7 start
 CONFIG_NLS_UTF8=y
-# Huaqin add for ZQL1650-5 by lanshiming at 2018/02/7 end
-
 # Huaqin add for ZQL1650-358 by liunianliang at 2018/02/08 start
 CONFIG_PSTORE=y
 CONFIG_PSTORE_CONSOLE=y
@@ -775,3 +767,12 @@ CONFIG_PSTORE_FTRACE=y
 CONFIG_PSTORE_DEBUG_FS=y
 CONFIG_FUNCTION_TRACER=y
 # Huaqin add for ZQL1650-358 by liunianliang at 2018/02/08 end
+# CONFIG_USELIB is not set
+# CONFIG_DEVKMEM is not set
+# CONFIG_DEVMEM is not set
+# CONFIG_FHANDLE is not set
+# CONFIG_INET_LRO is not set
+# CONFIG_NFSD is not set
+# CONFIG_NFS_FS is not set
+# CONFIG_SYSVIPC is not set
+CONFIG_ANDROID_BINDER_DEVICES=binder,hwbinder,vndbinder
