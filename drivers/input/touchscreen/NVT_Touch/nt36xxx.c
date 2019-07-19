@@ -401,7 +401,7 @@ const uint16_t touch_key_array[TOUCH_KEY_NUM] = {
 /* Huaqin modify  for TT1176710 by liunianliang at 2018/03/30 end */
 /* Huaqin modify gesture keycode by yuexinghan 20171109 start */
 /*#define GESTURE_EVENT_SWIPE_UP 248*/
-#define GESTURE_EVENT_DOUBLE_CLICK KEY_WAKEUP
+#define GESTURE_EVENT_DOUBLE_CLICK 260
 /* Huaqin modify gesture keycode by yuexinghan 20171109 end */
 
 const uint16_t gesture_key_array[] = {
@@ -1228,9 +1228,9 @@ void nvt_ts_wakeup_gesture_report(uint8_t gesture_id)
 
 	if (keycode > 0 ) {
 		if (is_double_tap == 1) {
-			input_report_key(ts->input_dev, KEY_WAKEUP, 1);
+			input_report_key(ts->input_dev, keycode, 1);
 			input_sync(ts->input_dev);
-			input_report_key(ts->input_dev, KEY_WAKEUP, 0);
+			input_report_key(ts->input_dev, keycode, 0);
 			input_sync(ts->input_dev);
 			is_double_tap = 0;
 		} else {
