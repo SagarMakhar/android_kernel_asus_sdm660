@@ -14,6 +14,8 @@
 #ifndef __LINUX_ARM_SMCCC_H
 #define __LINUX_ARM_SMCCC_H
 
+#include <linux/linkage.h>
+#include <linux/types.h>
 #include <uapi/linux/const.h>
 
 /*
@@ -78,9 +80,6 @@
 			   0, 0x8000)
 
 #ifndef __ASSEMBLY__
-
-#include <linux/linkage.h>
-#include <linux/types.h>
 
 /**
  * struct arm_smccc_res - Result from SMC/HVC call
